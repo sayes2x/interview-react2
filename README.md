@@ -22,4 +22,4 @@ Use React with vanilla JS or TypeScript.
 # Expectations
 Implement the above listed requirements in a manner you see fitting. Focus more on functional implementation than on look and feel.
 Demonstrate design and implementation aspects you feel are important in a software project.
-Create a pull request with your implementation.
+Publish your implementation under your own github account.
