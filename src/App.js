@@ -1,14 +1,14 @@
 import React from 'react';
 import './App.css';
 
-import Clock from './components/Clock'
+import Task from './components/Task'
 import Grid from './components/grid/Grid'
 
 function App() {
   return (
     <div className="App">
       <h1>Task Timer</h1>
-      <Clock />
+      <Task />
       <Grid />
     </div>
   );

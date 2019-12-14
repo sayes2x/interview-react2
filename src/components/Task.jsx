@@ -4,7 +4,7 @@ const initialState = {
   task: '',
   buttonText: 'Start Task',
   taskInputDisabled: false,
-  timerButtonDisabled: true
+  taskButtonDisabled: true
 }
 
 const reducer = (state, action) => {
@@ -12,13 +12,13 @@ const reducer = (state, action) => {
     case 'UPDATE_TASK':
       return { ...state, task: action.task}
     case 'DISABLE_BUTTON':
-      return { ...state, timerButtonDisabled: true }
+      return { ...state, taskButtonDisabled: true }
     case 'ENABLE_BUTTON':
-       return { ...state, timerButtonDisabled: false }
-       case 'DISABLE_INPUT':
-          return { ...state, taskInputDisabled: true }
-        case 'ENABLE_INPUT':
-           return { ...state, taskInputDisabled: false }
+       return { ...state, taskButtonDisabled: false }
+    case 'DISABLE_INPUT':
+      return { ...state, taskInputDisabled: true }
+    case 'ENABLE_INPUT':
+      return { ...state, taskInputDisabled: false }
     case 'SET_BUTTON_TEXT':
       return { ...state, buttonText: action.buttonText}
     default:
@@ -26,14 +26,14 @@ const reducer = (state, action) => {
   }
 }
 
-const Clock = () => {
-  const [clockState, dispatch] = useReducer(reducer, initialState)
+const Task = () => {
+  const [taskState, dispatch] = useReducer(reducer, initialState)
   const inputRef = useRef(null)
 
   useEffect(() => {
     // input will have focus whenever it is empty
-    !clockState.task && inputRef.current.focus()
-  }, [clockState.task])
+    !taskState.task && inputRef.current.focus()
+  }, [taskState.task])
 
   const handleInput = (e) => {
     const value = e.target.value
@@ -42,12 +42,13 @@ const Clock = () => {
     dispatch({ type: 'UPDATE_TASK', task: value })
   }
 
-  const handleClick = () => {
-    if (clockState.buttonText === 'Start Task') {
+  const handleSubmit = e => {
+    e.preventDefault()
+    if (taskState.buttonText === 'Start Task') {
       // call function to add task to Current Task and start timer
       dispatch({ type: 'DISABLE_INPUT' })
       dispatch({ type: 'SET_BUTTON_TEXT', buttonText: 'End Task' })
-    } else {
+    } else { // if buttonText === 'End Task'
       // call function to end timer and add current task to tasks
       dispatch({ type: 'UPDATE_TASK', task: '' })
       inputRef.current.value = ''
@@ -55,27 +56,25 @@ const Clock = () => {
       dispatch({ type: 'DISABLE_BUTTON' })
       dispatch({ type: 'ENABLE_INPUT' })
     }
-
   }
 
   return (
-    <>
+    <form onSubmit={handleSubmit}>
       <input
         ref={inputRef}
         type="text"
         placeholder='Enter your task'
-        task={clockState.task}
-        disabled={clockState.taskInputDisabled}
+        task={taskState.task}
+        disabled={taskState.taskInputDisabled}
         onChange={handleInput}
       />
       <button
-        type='button'
-        disabled={clockState.timerButtonDisabled}
-        onClick={handleClick} >
-          {clockState.buttonText}
+        type='submit'
+        disabled={taskState.timerButtonDisabled} >
+          {taskState.buttonText}
       </button>
-    </>
+    </form>
   )
 }
 
-export default Clock
+export default Task
