@@ -1,8 +1,8 @@
 import React from 'react';
 import './App.css';
 
-import Clock from './components/Clock'
-import Grid from './components/Grid'
+import Clock from './components/clock/Clock'
+import Grid from './components/grid/Grid'
 
 function App() {
   return (
