@@ -1,7 +1,7 @@
 import React from 'react';
 import './App.css';
 
-import Clock from './components/clock/Clock'
+import Clock from './components/Clock'
 import Grid from './components/grid/Grid'
 
 function App() {
