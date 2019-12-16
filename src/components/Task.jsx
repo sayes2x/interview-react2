@@ -1,4 +1,5 @@
 import React, { useReducer, useEffect, useRef } from 'react';
+import './Task.css'
 
 const initialState = {
   task: '',
@@ -49,13 +50,12 @@ const Task = ({ newTask, endTask }) => {
       dispatch({ type: 'DISABLE_INPUT' })
       dispatch({ type: 'SET_BUTTON_TEXT', buttonText: 'End Task' })
     } else { // if buttonText === 'End Task'
-      // call function to end timer and add current task to tasks
       endTask()
-      dispatch({ type: 'UPDATE_TASK', task: '' })
-      inputRef.current.value = ''
       dispatch({ type: 'SET_BUTTON_TEXT', buttonText: 'Start Task' })
       dispatch({ type: 'DISABLE_BUTTON' })
       dispatch({ type: 'ENABLE_INPUT' })
+      dispatch({ type: 'UPDATE_TASK', task: '' })
+      inputRef.current.value = ''
     }
   }
 
