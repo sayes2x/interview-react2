@@ -20,4 +20,4 @@ I also wrote a blog article describing how to [create accurate JavaScript timer 
 
 I enjoyed the opportunity to update this timer function to a React hook. I hope you like it.
 
-I deplyed [Task Timer](sayes2x-task-timer.netlify.com) if you would like to view it online.
+I deplyed [Task Timer](httpsL//sayes2x-task-timer.netlify.com) if you would like to view it online.
