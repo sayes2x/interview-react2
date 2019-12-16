@@ -1,3 +1,5 @@
+#Task Timer
+
 This project was developed using React. I used only functional components and made extensive use to hooks.
 
 In this project I used the following hooks:
@@ -16,4 +18,6 @@ I previously created a JavaScript Timer as a React class component and made it a
 
 I also wrote a blog article describing how to [create accurate JavaScript timer functions](https://medium.com/@sayes2x/creating-an-accurate-javascript-timer-function-in-react-255f3f5cf50c).
 
-I enjoyed the opportunity to update this timer function to a React hook.
+I enjoyed the opportunity to update this timer function to a React hook. I hope you like it.
+
+I deplyed [Task Timer](sayes2x-task-timer.netlify.com) if you would like to view it online.
