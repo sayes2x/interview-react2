@@ -1,4 +1,4 @@
-#Task Timer
+# Task Timer
 
 This project was developed using React. I used only functional components and made extensive use to hooks.
 
