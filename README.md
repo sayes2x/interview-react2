@@ -1,6 +1,11 @@
 This project was developed using React. I used only functional components and made extensive use to hooks.
 
-In this project I used the following hooks: useState, useReducer, useEffect useRef, useCallback.
+In this project I used the following hooks:
+- useState
+- useReducer
+- useEffect
+- useRef
+- useCallback
 
 I also created two custom hooks:
 
