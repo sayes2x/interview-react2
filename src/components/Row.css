@@ -1,5 +1,14 @@
 .row {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 2fr;
+  list-style-type: none;
+}
+
+.label {
   border-bottom: 2px solid black;
+  font-size: x-large;
+}
+
+.current-task {
+  font-style: italic;
 }

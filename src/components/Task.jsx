@@ -26,7 +26,7 @@ const reducer = (state, action) => {
   }
 }
 
-const Task = () => {
+const Task = ({ newTask, endTask }) => {
   const [taskState, dispatch] = useReducer(reducer, initialState)
   const inputRef = useRef(null)
 
@@ -45,11 +45,12 @@ const Task = () => {
   const handleSubmit = e => {
     e.preventDefault()
     if (taskState.buttonText === 'Start Task') {
-      // call function to add task to Current Task and start timer
+      newTask(taskState.task)
       dispatch({ type: 'DISABLE_INPUT' })
       dispatch({ type: 'SET_BUTTON_TEXT', buttonText: 'End Task' })
     } else { // if buttonText === 'End Task'
       // call function to end timer and add current task to tasks
+      endTask()
       dispatch({ type: 'UPDATE_TASK', task: '' })
       inputRef.current.value = ''
       dispatch({ type: 'SET_BUTTON_TEXT', buttonText: 'Start Task' })
@@ -70,7 +71,7 @@ const Task = () => {
       />
       <button
         type='submit'
-        disabled={taskState.timerButtonDisabled} >
+        disabled={taskState.taskButtonDisabled} >
           {taskState.buttonText}
       </button>
     </form>
