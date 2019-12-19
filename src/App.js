@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import './App.css';
+import ClockImage from './pict/clock-48.png'
 
 import Task from './components/Task'
 import Grid from './components/Grid'
@@ -45,7 +46,7 @@ function App() {
     <div className="app">
       <div className='content'>
       <header>
-      <h1>Task Timer</h1>
+      <h1><img src={ClockImage} alt='clock' /> Task Timer <img src={ClockImage} alt='clock' /></h1>
       </header>
       <Task newTask={newTask} endTask={endTask} />
       <Grid currentTask={currentTask} previousTasks={previousTasks} />
