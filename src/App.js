@@ -6,7 +6,7 @@ import Grid from './components/Grid'
 
 import useHeartbeat from './utils/heartbeat'
 import useSessionStorage from './utils/sessionStorage'
-import formatTime from './utils/formatTime';
+import formatTime from './utils/formatTime'
 
 function App() {
   const [currentTask, setCurrentTask] = useState({})

@@ -1,8 +1,8 @@
 .app {
-  text-align: center;
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+  text-align: center;
 }
 
 .content {
@@ -11,4 +11,14 @@
 
 header, footer {
   margin: 5vh 0;
+}
+
+h2 {
+  font-size: medium;
+}
+
+@media (min-width: 640px) {
+  h2 {
+    font-size: x-large;
+  }
 }

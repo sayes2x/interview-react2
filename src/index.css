@@ -1,9 +1,26 @@
 body {
-  margin: 0;
+  background-color: #1d1d22;
+  color: #5d6f89;
   font-family: 'Montserrat', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: #1d1d22;
-  color: #5d6f89;
-  margin: 0 20vw;
+  margin: 0 2vw;
+}
+
+@media (min-width: 768px) {
+  body {
+    margin: 0 5vw;
+  }
+}
+
+@media (min-width: 1024px) {
+  body {
+    margin: 0 10vw;
+  }
+}
+
+@media (min-width: 1280px) {
+  body {
+    margin: 0 15vw;
+  }
 }

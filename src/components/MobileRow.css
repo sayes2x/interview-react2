@@ -1,0 +1,42 @@
+.mobile-row {
+  border-bottom: 2px solid #5d6f89;
+  display: grid;
+  font-size: medium;
+  font-weight: 500;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-areas:
+    "start-time end-time duration"
+    "description description description";
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.mobile-label {
+  color: white;
+  font-size: small;
+  margin: 0 5px;
+}
+
+.current-task {
+  color: #6b7d65;
+}
+
+.start-time {
+  grid-area: start-time;
+}
+
+.end-time {
+  grid-area: end-time;
+}
+
+.duration {
+  grid-area: duration;
+}
+
+.description {
+  grid-area: description;
+}
+
+p {
+  margin: 8px 0;
+}
