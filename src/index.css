@@ -1,3 +1,7 @@
+body, body * {
+  max-height: 1000000px; /* disable font boosting */
+}
+
 body {
   background-color: #1d1d22;
   color: #5d6f89;

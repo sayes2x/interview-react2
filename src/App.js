@@ -52,7 +52,7 @@ function App() {
       <Grid currentTask={currentTask} previousTasks={previousTasks} />
       </div>
       <footer>
-        <h2>Coded by Scott A Price</h2>
+        <h2>Coded by Scott A. Price</h2>
       </footer>
     </div>
   );

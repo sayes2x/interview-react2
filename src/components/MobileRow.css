@@ -1,8 +1,8 @@
 .mobile-row {
   border-bottom: 2px solid #5d6f89;
   display: grid;
-  font-size: 16px;
-  font-weight: 500;
+  /* font-size: 16px;
+  font-weight: 500; */
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-areas:
     "start-time end-time duration"
@@ -11,10 +11,15 @@
   padding-left: 0;
 }
 
-.mobile-label {
+li > .mobile-label {
   color: white;
   font-size: 13px;
   margin: 0 5px;
+}
+
+.mobile-label + p {
+  font-size: 16px;
+  font-weight: 500;
 }
 
 .current-task {
