@@ -1,6 +1,6 @@
 # Task Timer
 
-This project was developed using React. I used only functional components and made extensive use to hooks.
+This project was developed using React. I used only functional components and made extensive use of hooks.
 
 In this project I used the following hooks:
 - useState
